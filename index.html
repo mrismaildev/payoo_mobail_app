@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body>
+
+    <main
+      class="min-h-screen flex items-center justify-center bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900">
+
+
+      <!-- Phone Shell -->
+      <div
+        class="relative w-93 h-203 rounded-[52px] bg-slate-100 shadow-[0_0_0_2px_#C8D0DC,0_0_0_6px_#E2E8F0,0_30px_80px_rgba(0,0,0,0.22)] overflow-hidden flex flex-col items-center">
+
+        <!-- Side buttons left -->
+        <div class="absolute -left-1 top-32.5 w-1 h-10 bg-slate-300 rounded-l-sm"></div>
+        <div class="absolute -left-1 top-46.25 w-1 h-[60px] bg-slate-300 rounded-l-sm"></div>
+        <div class="absolute left-[-4px] top-[260px] w-1 h-[60px] bg-slate-300 rounded-l-sm"></div>
+
+        <!-- Side button right -->
+        <div class="absolute right-[-4px] top-[150px] w-1 h-[70px] bg-slate-300 rounded-r-sm"></div>
+
+        <!-- Notch -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[130px] h-[34px] bg-[#1a1a1a] rounded-b-[22px] z-20">
+        </div>
+
+        <!-- Status Bar -->
+        <div class="absolute top-[34px] left-0 right-0 h-11 flex items-center justify-between px-7 z-10">
+          <span class="text-[13px] font-semibold text-slate-700 tracking-wide">9:41</span>
+          <div class="flex items-center gap-1.5">
+            <!-- Signal -->
+            <svg width="17" height="12" viewBox="0 0 17 12" fill="none">
+              <rect x="0" y="7" width="3" height="5" rx="0.8" fill="#334155" />
+              <rect x="4.5" y="4.5" width="3" height="7.5" rx="0.8" fill="#334155" />
+              <rect x="9" y="2" width="3" height="10" rx="0.8" fill="#334155" />
+              <rect x="13.5" y="0" width="3" height="12" rx="0.8" fill="#334155" opacity="0.3" />
+            </svg>
+            <!-- Wifi -->
+            <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
+              <path d="M8 9.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3z" fill="#334155" />
+              <path d="M3.5 6.5a6.5 6.5 0 019 0" stroke="#334155" stroke-width="1.5" stroke-linecap="round" />
+              <path d="M1 4a10 10 0 0114 0" stroke="#334155" stroke-width="1.5" stroke-linecap="round" opacity="0.35" />
+            </svg>
+            <!-- Battery -->
+            <svg width="25" height="12" viewBox="0 0 25 12" fill="none">
+              <rect x="0.5" y="0.5" width="21" height="11" rx="3" stroke="#334155" stroke-width="1" />
+              <rect x="22" y="3.5" width="2.5" height="5" rx="1.5" fill="#334155" opacity="0.4" />
+              <rect x="2" y="2" width="14" height="8" rx="1.5" fill="#334155" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Arc semicircle -->
+        <div class="absolute top-[78px] left-1/2 -translate-x-1/2 w-[260px] h-[130px] overflow-hidden">
+          <div class="w-[260px] h-[260px] rounded-full border-[2.5px] border-transparent"
+            style="background: linear-gradient(white,white) padding-box, linear-gradient(135deg,#1A6BFF 0%,#93C5FD 55%,transparent 70%) border-box">
+          </div>
+        </div>
+
+        <!-- Brand Logo -->
+        <div class="absolute top-[115px] left-1/2 -translate-x-1/2 z-10 drop-shadow-[0_4px_10px_rgba(26,107,255,0.30)]">
+          <svg width="52" height="48" viewBox="0 0 52 48" fill="none">
+            <rect x="4" y="18" width="8" height="14" rx="2" fill="#1A6BFF" opacity="0.4" />
+            <rect x="15" y="10" width="8" height="22" rx="2" fill="#1A6BFF" opacity="0.65" />
+            <rect x="26" y="4" width="8" height="28" rx="2" fill="#1A6BFF" />
+            <path d="M20 30 L30 42 L50 14" stroke="#1A6BFF" stroke-width="5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <!-- Login Card -->
+        <div
+          class="absolute top-[185px] bottom-0 left-0 right-0 bg-white rounded-t-[32px] px-7 pt-8 pb-12 shadow-[0_-6px_40px_rgba(0,0,0,0.08)]">
+
+          <!-- Drag handle -->
+          <div class="w-10 h-1 bg-gray-200 rounded-full mx-auto mb-8"></div>
+
+          <!-- Mobile Number -->
+          <div class="mb-5">
+            <label class="block text-sm font-semibold text-gray-800 mb-2 ml-1">Mobile Number</label>
+            <input id="inputMobailNumber" type="tel" placeholder="Enter your number"
+              class="w-full bg-slate-100 border border-transparent rounded-full px-5 py-3.5 text-sm text-gray-400 placeholder:text-slate-300 outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 focus:text-slate-800 transition-all" />
+          </div>
+
+          <!-- 4 Digit Pin -->
+          <div class="mb-8">
+            <label class="block text-sm font-semibold text-gray-800 mb-2 ml-1">4 Digit Pin</label>
+            <input id="inputPinNumber" type="password" maxlength="4" placeholder="Enter 4 Digit Pin"
+              class="w-full bg-slate-100 border border-transparent rounded-full px-5 py-3.5 text-sm text-gray-400 placeholder:text-slate-300 outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 focus:text-slate-800 transition-all" />
+          </div>
+
+          <!-- Login Button -->
+          <button id="btnLogIn"
+            class="w-full bg-blue-500 hover:bg-blue-600 active:scale-[0.98] text-white font-bold text-base rounded-full py-4 shadow-[0_6px_22px_rgba(59,130,246,0.45)] transition-all cursor-pointer">
+            Login
+          </button>
+
+          <!-- Forgot PIN -->
+          <p class="text-center text-xs text-gray-400 mt-5 font-medium tracking-wide">
+            Forgot PIN? <span class="text-blue-500 font-semibold">Reset here</span>
+          </p>
+
+        </div>
+
+        <!-- Home Indicator -->
+        <div class="absolute bottom-2.5 left-1/2 -translate-x-1/2 w-32.5 h-1 bg-black/20 rounded-full z-30"></div>
+
+      </div>
+
+      <script src="./js/utils.js"></script>
+      <script src="./js/index.js"></script>
+  </body>
+
+  </html>
