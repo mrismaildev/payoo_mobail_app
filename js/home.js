@@ -1,7 +1,6 @@
 console.log('I am connected');
 
 const btnAddMoney = document.getElementById('btnAddMoney');
-const sendtoast = document.querySelector('.sendtoast');
 
 btnAddMoney.addEventListener('click', function (e) {
   e.preventDefault();
@@ -12,7 +11,9 @@ btnAddMoney.addEventListener('click', function (e) {
   const selectBank = document.getElementById('selectBank').value;
   // console.log(balanceNumber, pinNumber, addAmount, accountNumber, selectBank);
   if (!pinNumber || !addAmount || !accountNumber || !selectBank) {
-    document.getElementById('hiddenToast').classList.remove('hidden');
+    const sendtoast = document.querySelector('.sendtoast');
+    sendtoast.classList.remove('hidden');
+    console.log(sendtoast);
     sendtoast.innerText = 'Please fil the all field';
     return;
   } else {
@@ -23,20 +24,12 @@ btnAddMoney.addEventListener('click', function (e) {
     return;
   }
   if (pinNumber === 1234) {
-
     const balance = getInputValueByText('availableBalance');
     let newBalalnce = balance + addAmount;
     document.getElementById('availableBalance').innerText = newBalalnce;
-  
 
-    sendtoast.classList.add('hidden');
-    const successTOAST = document.getElementById('succsess');
-    successTOAST.classList.remove('hidden');
-    successTOAST.innerText = 'Add Money Success';
-    console.log(successTOAST);
- 
     const div = document.createElement('div');
- 
+
     div.innerHTML = `
 
     <!-- Electricity Bill -->
@@ -59,8 +52,12 @@ btnAddMoney.addEventListener('click', function (e) {
     
     `;
     document.getElementById('transactionDetails').appendChild(div);
+
+    document.querySelector('.succsess').innerHTML = `
+     Add money successful <i class=" ti ti-check"></i>
     
-
-
+    `;
+  } else {
+    alert('Invalid password');
   }
 });

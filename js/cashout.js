@@ -2,25 +2,30 @@ console.log('I am cashout');
 
 const btnWithdraw = document.getElementById('btnWithdraw');
 
-btnWithdraw.addEventListener('click', function () {
+btnWithdraw.addEventListener('click', function (e) {
+  e.preventDefault();
   const agentNum = getInputValue('agentNumber');
   const getPin = getInputValue('pinCashout');
-  const currentBalance = document.getElementById('availableBalance').innerText;
-  const balanceConvert = parseFloat(currentBalance);
   const addCahoutAmaount = getInputValue('addCahoutAmaount');
   // console.log(currentBalance);
-  const checkNumberLength = agentNum.toString().length + 1;
 
   if (!agentNum || !agentNum || !getPin) {
     alert('Please fill input');
     return;
   }
+  const checkNumberLength = agentNum.toString().length;
+  console.log(checkNumberLength);
 
-  if (checkNumberLength !== 11 || getPin !== 1234) {
-    alert('Invalid Input Number');
-    return;
+  if (checkNumberLength === 11 && getPin === 1234) {
+
+    const balance = getInputValueByText('availableBalance');
+
+    const newBalance = balance - addCahoutAmaount;
+    if (addCahoutAmaount >=newBalance) {
+      alert('You have sufficient Balance')
+      return
+    }
+    document.getElementById('availableBalance').innerText = newBalance;
+    console.log('success')
   }
-  const newBalance = balanceConvert - addCahoutAmaount
-  document.getElementById('availableBalance').innerText = newBalance;
-
 });
