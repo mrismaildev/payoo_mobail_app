@@ -3,3 +3,9 @@ function getInputValue(id) {
   const inputvaluConvartNumber = parseFloat(inputValueByText)
   return inputvaluConvartNumber
 }
+
+function getInputValueByText(id) {
+  const inputValueBalance = document.getElementById(id).innerText
+  const numberBalance = parseFloat(inputValueBalance)
+  return numberBalance
+}
