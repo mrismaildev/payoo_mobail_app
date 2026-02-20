@@ -237,7 +237,9 @@
           </div>
         </div>
 
-        <div class="w-xs rounded-3xl m-4 px-6 py-2 bg-white">
+        <!-- Add money -->
+
+        <div class="hidden w-xs rounded-3xl m-4 px-6 py-2 bg-white">
           <h2 class="text-lg font-bold text-gray-900 mb-6">Add Money</h2>
           <!-- Select A Bank -->
           <div class="mb-5">
@@ -287,11 +289,54 @@
         </div>
 
 
+        <!-- Cashout from -->
+
+
+        
+        <div class=" w-xs rounded-3xl m-4 px-6 py-2 bg-white">
+          <h2 class="text-lg font-bold text-gray-900 mb-6">Cashout</h2>
+          <!-- Select A Bank -->
+
+        
+          <!-- Bank Account Number -->
+          <div class="mb-5">
+            <label class="block text-sm font-semibold text-gray-900 mb-2"> Agent Number</label>
+            <input id="agentNumber" type="text" placeholder="Enter 11 digit account number"
+              class="w-full bg-gray-100 text-sm text-gray-400 placeholder-gray-400 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          </div>
+        
+          <!-- Amount to Add -->
+          <div class="mb-5">
+            <label class="block text-sm font-semibold text-gray-900 mb-2">Amount</label>
+            <input id="addCahoutAmaount" type="text" placeholder="Add Amount to withdraw"
+              class="w-full bg-gray-100 text-sm text-gray-400 placeholder-gray-400 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          </div>
+        
+          <!-- Pin Number -->
+          <div class="mb-7">
+            <label class="block text-sm font-semibold text-gray-900 mb-2">Pin Number</label>
+            <input id="pinCashout" type="password" placeholder="Enter 4 digit pin number" maxlength="4"
+              class="w-full bg-gray-100 text-sm text-gray-400 placeholder-gray-400 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          </div>
+        
+          <!-- Submit Button -->
+          <button id="btnWithdraw"
+            class="w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-semibold text-base rounded-full py-2 transition-colors duration-150">
+            Withdraw Money
+          </button>
+        
+        </div>
+
+
+        
+
+
       </div>
       </div>
 
       <script src="./js/utils.js"></script>
       <script src="./js/home.js"></script>
+      <script src="./js/cashout.js"></script>
 </body>
 
 </html>
